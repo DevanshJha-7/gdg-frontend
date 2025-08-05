@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../output.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <title>GDG</title>
+  <style>
+    .font-nunito {
+      font-family: 'Nunito Sans', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="font-['Poppins'] bg-white dark:bg-[#0D0F1A] pr-12 overflow-x-hidden  ">
+
+
+  <div style="background-image: url('./Rectangle 4.png'); background-size: cover; background-repeat: no-repeat; background-position: bottom;" class="relative pb-[100px]  " >
+    <div class="px-6 sm:px-10 md:px-[80px] py-6 sm:pt-10 relative dark:bg-[#1F2233]">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center relative">
+          <img src="./Polygon 1.png" class="absolute left-[30px] sm:left-[40px] md:left-[30px] block dark:hidden" />
+          <img src="./logopoly.svg" class="absolute left-[30px] sm:left-[40px] md:left-[30px] hidden dark:block" />
+          <span class="ml-10 sm:ml-14 text-[#113C49] text-[24px] sm:text-[28px] md:text-[32px] font-bold tracking-[0.04em] z-10 dark:text-white ">
+            Skilline
+          </span>
+        </div>
+        <button id="menu-btn" class="lg:hidden z-20 focus:outline-none">
+          <svg class="w-8 h-8 text-[#252641] dark:text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <div class="hidden lg:flex items-center space-x-4 sm:space-x-6 md:space-x-[40px] lg:space-x-[50px] text-[#252641] text-[16px] sm:text-[18px] md:text-[20px] dark:text-white">
+          <a href="#" class="font-light">Home</a>
+          <a href="#" class="font-light">Blog</a>
+          <a href="#" class="font-light">Careers</a>
+          <a href="#" class="font-light">About Us</a>
+          <button id="theme-toggle-desktop" onclick="toggleDarkMode()" class="dark:bg-black dark:text-white dark:border-white rounded-full px-4 sm:px-6 py-2 sm:py-3 text-[16px] sm:text-[18px] text-[#6C6C6C] bg-white font-[400] hover:bg-gray-200 dark:hover:bg-slate-900 dark:hover:text-white transition bg-white flex items-center gap-2">
+            <img id="theme-icon-desktop" class="w-5 h-5" src="./moon.png" alt="Theme Icon" />
+            <span class="px-3" id="theme-text-desktop">Dark Mode</span>
+          </button>
+          <button class="rounded-full px-4 sm:px-6 py-2 sm:py-3 text-[16px] sm:text-[18px] text-[#6C6C6C] bg-white font-[400] hover:bg-gray-200 transition">
+            Login
+          </button>
+          <button class="rounded-full px-4 sm:px-6 py-2 sm:py-3 text-[16px] sm:text-[18px] text-white bg-[#F48C06] font-medium hover:bg-[#e67c00] transition">
+            Sign Up
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="lg:hidden hidden flex-col mt-6 space-y-4 text-black text-[18px] font-medium transition-all duration-300 dark:text-white">
+        <a href="#">Home</a>
+        <a href="#">Blog</a>
+        <a href="#">Careers</a>
+        <a href="#">About Us</a>
+        <button id="theme-toggle-mobile" onclick="toggleDarkMode()" class="dark:bg-black dark:text-white flex items-center gap-2">
+          <img id="theme-icon-mobile" class="w-5 h-5" src="./moon.png" alt="Theme Icon" />
+          <span>Dark Mode</span>
+        </button>
+        <button class="rounded-full px-6 py-2 text-[#6C6C6C] bg-white hover:bg-gray-200 transition">Login</button>
+        <button class="rounded-full px-6 py-2 text-white bg-[#F48C06] hover:bg-[#e67c00] transition">Sign Up</button>
+      </div>
+    </div>
+    <div class="flex flex-col lg:flex-row relative">
+      <div class="flex-1 flex flex-col justify-center lg:rounded-bl-[250px] pt-[50px] sm:pt-[80px] lg:pt-[100px] pb-[40px] sm:pb-[50px] lg:pb-[60px] px-[20px] sm:px-[40px] md:px-[60px] lg:px-[80px] xl:px-[100px] order-2 lg:order-1">
+        <h1 class="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] xl:text-[54px] leading-[1.3] sm:leading-[1.4] lg:leading-[1.5] font-bold text-[#F48C06] dark:text-[#F48C06] text-center lg:text-left">
+          Studying <span class="text-[#2F327D] font-bold ">Online is now<br class="hidden sm:block" />much easier</span>
+        </h1>
+        <p class="mt-4 sm:mt-6 text-[14px] sm:text-[16px] lg:text-[18px] text-[#464646] dark:text-[#B3B3B3] max-w-[500px] text-center lg:text-left mx-auto lg:mx-0">
+          Skilline is an interesting platform that will teach you in more an interactive way
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-6 mt-6 sm:mt-8">
+          <button class="bg-[#F48C06] text-white px-6 sm:px-8 lg:px-10 py-2 sm:py-3 rounded-full text-[18px] sm:text-[20px] lg:text-[24px] font-medium hover:scale-105 transition-transform">
+            Join for free
+          </button>
+          <div class="flex items-center space-x-3 sm:space-x-4">
+            <div class="w-[60px] h-[60px] sm:w-[80px] sm:h-[80px] lg:w-[100px] lg:h-[100px] py-2">
+              <img src="./image.png" alt="Play" class="w-full h-auto hover:scale-110 transition-transform cursor-pointer" />
+            </div>
+            <p class="text-[#696984] font-medium text-[16px] sm:text-[20px] lg:text-[24px]">Watch how it works</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex-1 relative flex justify-center items-center min-h-[300px] sm:min-h-[400px] lg:min-h-auto order-1 lg:order-2">
+        <div class="relative w-[80%] sm:w-[70%] lg:w-[90%] max-w-[900px] flex justify-center">
+          <img src="./giel.png" alt="Girl" class="w-full h-auto" />
+          <div data-aos="fade-down-right" data-aos-duration="1000" class="absolute top-[15%] left-[0%] w-[180px] sm:w-[220px] lg:w-[270px] h-[60px] sm:h-[70px] lg:h-[80px] flex items-center p-2 sm:p-3 lg:p-4 bg-white/80 backdrop-blur-md rounded-[15px] lg:rounded-[20px] shadow-md z-10">
+            <div class="flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 rounded-xl mr-2 sm:mr-3 lg:mr-4">
+              <img src="./calender.png" alt="Calender" class="w-full h-full" />
+            </div>
+            <div>
+              <p class="text-[14px] sm:text-[16px] lg:text-[20px] font-bold font-nunito text-[#595959]">250k</p>
+              <p class="text-[10px] sm:text-[12px] lg:text-[16px] font-semibold font-nunito text-[#595959]">Assisted Student</p>
+            </div>
+          </div>
+          <div data-aos="fade-up-right" data-aos-duration="1000" class="absolute bottom-[8%] left-0 w-[220px] sm:w-[280px] lg:w-[320px] h-[100px] sm:h-[120px] lg:h-[137px] bg-white/80 backdrop-blur-md rounded-[15px] lg:rounded-[20px] shadow-md flex items-center p-2 sm:p-3 lg:p-4 space-x-2 sm:space-x-3 lg:space-x-4">
+            <div class="relative">
+              <img src="./icon-student.jpg" alt="Image-User" class="w-8 h-8 sm:w-10 sm:h-10 lg:w-14 lg:h-14 rounded-full" />
+              <div class="absolute bottom-0 right-0 w-[12px] h-[12px] sm:w-[16px] sm:h-[16px] lg:w-[20px] lg:h-[20px] bg-[#2EBB5E] border-[1px] sm:border-[2px] border-[#FBECD7] rounded-full"></div>
+            </div>
+            <div class="flex flex-col flex-1">
+              <span class="text-[#595959] font-bold text-[12px] sm:text-[14px] lg:text-[18px] leading-tight sm:leading-[36px] font-nunito">User Experience Class</span>
+              <span class="text-[#545567] font-semibold text-[10px] sm:text-[12px] lg:text-[16px] leading-tight sm:leading-[30px] font-nunito">Today at 12.00 PM</span>
+              <button class="mt-1 sm:mt-2 bg-[#D8587E] text-white text-[10px] sm:text-[12px] lg:text-[16px] px-2 sm:px-3 lg:px-4 py-1 sm:py-2 rounded-full w-fit hover:scale-105 transition-transform">
+                Join Now
+              </button>
+            </div>
+          </div>
+          <div data-aos="fade-down-left" data-aos-duration="1000" class="absolute top-[40%] sm:top-[45%] right-[-5%] w-[180px] sm:w-[220px] lg:w-[270px] h-[60px] sm:h-[70px] lg:h-[85px] bg-white/80 backdrop-blur-md rounded-xl lg:rounded-2xl shadow-md flex items-center px-2 sm:px-3 lg:px-4 py-2 space-x-2 sm:space-x-3">
+            <div class="relative w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10">
+              <img src="./mail.png" alt="Mail" class="w-full h-full" />
+              <img src="./email 2 1.png" alt="Overlay" class="absolute inset-0 w-[60%] h-[60%] m-auto" />
+            </div>
+            <div class="flex-1">
+              <p class="text-[12px] sm:text-[14px] lg:text-[18px] font-semibold text-[#2F327D] font-nunito">
+                Congratulations</p>
+              <p class="text-[10px] sm:text-[11px] lg:text-[14px] text-[#6C6C6C] font-nunito">Your admission completed</p>
+            </div>
+            <img src="./Group 11.png" alt="Tick" class="absolute top-[5px] sm:top-[8px] lg:top-[10px] right-[5px] sm:right-[8px] lg:right-[10px] w-[12px] h-[12px] sm:w-[16px] sm:h-[16px] lg:w-[20px] lg:h-[20px]" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="companies flex justify-center px-4 sm:px-6 md:px-8 lg:px-0">
+    <div
+      class="h-[80px] sm:h-[100px] md:h-[120px] lg:h-[150px] w-full sm:w-[80%] md:w-[70%] lg:w-[60%] flex items-center justify-center">
+      <img src="./Company.png" alt="companies" class="w-full h-auto max-w-full object-contain px-2 sm:px-0"
+        data-aos="zoom-in" data-aos-duration="1000" />
+    </div>
+  </section>
+
+  <section class="py-16">
+    <section class="w-full max-w-[1486px] mx-auto py-16 px-4">
+      <div class="flex flex-col items-center mb-16 px-4">
+        <h2 class="font-poppins text-3xl sm:text-4xl text-center leading-snug sm:leading-[64.8px]" data-aos="fade-up">
+          <span class="font-bold text-[#2f327d] dark:text-[#9AA4FF]">All-In-One </span>
+          <span class="font-bold text-[#f48c06]">Cloud Software.</span>
+        </h2>
+        <p class="font-poppins text-[#696983] text-lg sm:text-2xl text-center leading-relaxed sm:leading-[43.2px] max-w-[837px] mt-5"
+          data-aos="fade-up" data-aos-delay="200">
+          Skilline is one powerful online software suite that combines all the tools needed to run a successful school
+          or office.
+        </p>
+      </div>
+
+      <div class="flex flex-col lg:flex-row items-center justify-center gap-14">
+        <div class="relative w-full max-w-[450px]" data-aos="fade-up" data-aos-duration="1000">
+          <img src="./online_billing.png"
+            class="absolute w-[120px] sm:w-[150px] md:w-[180px] h-auto top-[-30px] left-1/2 transform -translate-x-1/2 rounded-[50px] z-10" />
+          <div
+            class="mt-[80px] h-auto min-h-[430px] bg-white rounded-[20px] shadow-[0px_10px_60px_#262c7514] p-8 sm:p-12 flex flex-col items-center justify-center">
+            <h3 class="font-poppins text-[#2f327d] text-2xl sm:text-3xl font-medium text-center mt-16 mb-4">
+              Online Billing, Invoicing, & Contracts
+            </h3>
+            <p class="font-poppins text-[#696983] text-base sm:text-xl text-center leading-relaxed max-w-[377px]">
+              Simple and secure control of your organization's financial and legal transactions. Send customized
+              invoices and contracts.
+            </p>
+          </div>
+        </div>
+
+        <div class="relative w-full max-w-[450px]" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <img src="./or_Cal.png"
+            class="absolute w-[120px] sm:w-[150px] md:w-[180px] h-auto top-[-30px] left-1/2 transform -translate-x-1/2 rounded-[50px] z-10" />
+          <div
+            class="mt-[80px] h-auto min-h-[430px] bg-white rounded-[20px] shadow-[0px_10px_60px_#262c7514] p-8 sm:p-12 flex flex-col items-center justify-center">
+            <h3 class="font-poppins text-[#2f327d] text-2xl sm:text-3xl font-medium text-center mt-16 mb-4">
+              Easy Scheduling & Attendance Tracking
+            </h3>
+            <p class="font-poppins text-[#696983] text-base sm:text-xl text-center leading-relaxed max-w-[377px]">
+              Schedule and reserve classrooms at one campus or multiple campuses. Keep detailed records of student
+              attendance.
+            </p>
+          </div>
+        </div>
+
+        <div class="relative w-full max-w-[450px]" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+          <img src="./cust_track.png"
+            class="absolute w-[120px] sm:w-[150px] md:w-[180px] h-auto top-[-30px] left-1/2 transform -translate-x-1/2 rounded-[50px] z-10" />
+          <div
+            class="mt-[80px] h-auto min-h-[430px] bg-white rounded-[20px] shadow-[0px_10px_60px_#262c7514] p-8 sm:p-12 flex flex-col items-center justify-center">
+            <h3 class="font-poppins text-[#2f327d] text-2xl sm:text-3xl font-medium text-center mt-16 mb-4">
+              Customer Tracking
+            </h3>
+            <p class="font-poppins text-[#696983] text-base sm:text-xl text-center leading-relaxed max-w-[377px]">
+              Automate and track emails to individuals or groups. Skilline's built-in system helps organize your
+              organization.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <section class="about px-4 py-16">
+    <div class="w-full max-w-[1308px] mx-auto">
+      <h2
+        class="text-center font-semibold text-[32px] sm:text-[40px] md:text-[44px] leading-tight md:leading-[79.2px] mb-6 font-['Poppins',Helvetica]"
+        data-aos="fade-up">
+        <span class="text-[#2f327d] dark:text-[#9AA4FF]">What is </span>
+        <span class="text-[#f48c06]">Skilline?</span>
+      </h2>
+
+      <p class="text-center text-lg sm:text-xl md:text-2xl text-[#696983] tracking-[0.48px] leading-relaxed md:leading-[43.2px] max-w-[1101px] mx-auto mb-12 font-['Poppins',Helvetica] font-normal"
+        data-aos="fade-up" data-aos-delay="200">
+        Skilline is a platform that allows educators to create online classes whereby they can store the course
+        materials online; manage assignments, quizzes and exams; monitor due dates; grade results and provide students
+        with feedback all in one place.
+      </p>
+
+      <div class="flex flex-col md:flex-row justify-between gap-8">
+        <div class="w-full md:w-1/2 h-[400px] rounded-[20px] overflow-hidden relative" data-aos="zoom-in-up"
+          data-aos-duration="800">
+          <div class="absolute inset-0 bg-cover bg-center rounded-[20px]"
+            style="background-image: url('./for_ins.png');">
+            <div class="absolute inset-0 bg-[#171b4080] rounded-[20px] opacity-60"></div>
+          </div>
+          <div class="relative z-10 h-full flex flex-col items-center justify-center px-4">
+            <h3
+              class="font-['Poppins',Helvetica] font-semibold text-white text-[24px] sm:text-[28px] md:text-[32px] text-center mb-6">
+              FOR INSTRUCTORS
+            </h3>
+            <button
+              class="w-full max-w-[283px] h-16 sm:h-20 border border-white bg-transparent text-white rounded-full font-['Poppins',Helvetica] font-medium text-lg sm:text-xl hover:bg-[#23bdee] hover:scale-105 transition-transform">
+              Start a class today
+            </button>
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 h-[400px] rounded-[20px] overflow-hidden relative" data-aos="zoom-in-up"
+          data-aos-duration="800" data-aos-delay="200">
+          <div
+            class="absolute inset-0 bg-cover bg-center rounded-[20px] transition-transform duration-300 hover:scale-105"
+            style="background-image: url('./for_stu.png');">
+            <div class="absolute inset-0 bg-[#171b4073] rounded-[20px] opacity-60"></div>
+          </div>
+          <div class="relative z-10 h-full flex flex-col items-center justify-center px-4">
+            <h3
+              class="font-['Poppins',Helvetica] font-semibold text-white text-[24px] sm:text-[28px] md:text-[32px] text-center mb-6">
+              FOR STUDENTS
+            </h3>
+            <button
+              class="w-full max-w-[283px] h-16 sm:h-20 border border-white text-white rounded-full font-['Poppins',Helvetica] font-medium text-lg sm:text-xl hover:bg-[#23bdee] hover:scale-105 transition-transform">
+              Enter access code
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="classroom-skilline px-4 md:px-8 lg:px-12 py-16">
+    <div class="w-full max-w-[1308px] mx-auto flex flex-col lg:flex-row gap-8 items-center">
+      <div class="w-full lg:w-1/2 flex flex-col" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
+        <div class="relative">
+          <div class="w-[40px] h-[40px] sm:w-[73px] sm:h-[73px] bg-[#f4b667] rounded-full absolute -left-4 -top-4">
+          </div>
+          <h2 class="relative font-['Poppins',Helvetica] text-[28px] sm:text-[36px] md:text-4xl leading-snug ml-6">
+            <span class="font-medium text-[#2f327d] dark:text-[#9AA4FF]">Everything you can do in a physical
+              classroom,
+            </span>
+            <span class="font-medium text-[#f48c06]">you can do with Skilline</span>
+          </h2>
+        </div>
+
+        <div class="relative">
+          <p
+            class="font-['Poppins',Helvetica] text-lg sm:text-xl md:text-2xl text-[#696983] tracking-[0.48px] leading-relaxed">
+            Skilline's school management software helps traditional and online schools manage scheduling, attendance,
+            payments and virtual classrooms all in one secure cloud-based system.
+          </p>
+          <div class="w-[20px] h-[20px] sm:w-[30px] sm:h-[30px] bg-[#f4b667] rounded-full absolute -right-2 bottom-4">
+          </div>
+        </div>
+
+        <a href="#" class="font-['Poppins',Helvetica] text-[#696983] text-lg sm:text-xl underline self-start ">
+          Learn more
+        </a>
+      </div>
+
+      <div class="w-full lg:w-1/2 relative " data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
+        <div
+          class="w-[100px] h-[100px] sm:w-[138px] sm:h-[138px] bg-[#23bdee] rounded-[20px] absolute -left-4 -top-4">
+        </div>
+        <div
+          class="w-[150px] h-[150px] sm:w-[231px] sm:h-[231px] bg-[#f3ac50] rounded-[20px] absolute -right-4 -bottom-4">
+        </div>
+
+        <div class="relative mx-auto overflow-hidden">
+          <div class="w-full h-[300px] sm:h-[400px] md:h-[471px] bg-cover bg-center relative rounded-none"
+            style="background-image: url('./classroom.png')">
+            <div
+              class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[50px] h-[50px] sm:w-[70px] sm:h-[70px] bg-white rounded-full shadow-[2px_20px_60px_#3d9bb81a] flex items-center justify-center">
+              <img src="./Polygon 2.svg" alt="Play Button" class="w-[20px] h-[24px] ml-1" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="features pl-5 py-16">
+    <div class="flex flex-col-reverse lg:flex-row items-center gap-8 mb-32">
+      <div class="w-full lg:w-1/2" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
+        <img src="./classroom-ui.png" alt="Classroom UI Illustration" class="w-full h-auto max-w-[896px]" />
+      </div>
+
+      <div class="w-full lg:w-1/2 space-y-8">
+        <h3
+          class="text-[28px] sm:text-[36px] lg:text-[40px] lg:leading-[64px] [font-family:'Poppins',Helvetica] font-normal tracking-[0]"
+          data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
+          <span class="font-semibold text-[#2f327d] dark:text-[#9AA4FF]">A </span>
+          <span class="font-semibold text-[#f48c06]">user interface</span>
+          <span class="font-semibold text-[#2f327d] dark:text-[#9AA4FF]"> designed for the classroom</span>
+        </h3>
+
+        <div class="space-y-6">
+          <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-[0px_15px_44px_#0d0f1c1f]"
+            data-aos="fade-left" data-aos-duration="800" data-aos-once="true" data-aos-delay="200">
+            <div class="w-[60px] h-[60px] bg-neutral-50 rounded-full flex items-center justify-center shrink-0">
+              <img src="./grid.png" alt="Icon" class="w-[27px] h-[26px]" />
+            </div>
+            <p class="text-base sm:text-lg lg:text-[22px] leading-relaxed lg:leading-[39.6px] text-[#696983]">
+              Teachers don't get lost in the grid view and have a dedicated Podium space.
+            </p>
+          </div>
+
+          <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-[0px_15px_44px_#0d0f1c1f]"
+            data-aos="fade-left" data-aos-duration="800" data-aos-once="true" data-aos-delay="300">
+            <div class="w-[60px] h-[60px] bg-neutral-50 rounded-full flex items-center justify-center shrink-0">
+              <img src="./ta.png" alt="Icon" class="w-[27px] h-[26px]" />
+            </div>
+            <p class="text-base sm:text-lg lg:text-[22px] leading-relaxed lg:leading-[39.6px] text-[#696983]">
+              TA's and presenters can be moved to the front of the class.
+            </p>
+          </div>
+
+          <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-[0px_15px_44px_#0d0f1c1f]"
+            data-aos="fade-left" data-aos-duration="800" data-aos-once="true" data-aos-delay="400">
+            <div class="w-[60px] h-[60px] bg-neutral-50 rounded-full flex items-center justify-center shrink-0">
+              <img src="./teachers.png" alt="Icon" class="w-[30px] h-[26px]" />
+            </div>
+            <p class="text-base sm:text-lg lg:text-[22px] leading-relaxed lg:leading-[39.6px] text-[#696983]">
+              Teachers can easily see all students and class data at one time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="w-full max-w-screen-xl mx-auto px-4 lg:px-8">
+      <div class="flex flex-col-reverse lg:flex-row items-center gap-8 mb-32 overflow-hidden">
+        <div class="w-full lg:w-1/2 space-y-6" data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
+          <h3 class="text-[28px] sm:text-[36px] lg:text-[40px] leading-snug lg:leading-[64px] font-poppins font-normal">
+            <span class="font-semibold text-[#f48c06]">Tools</span>
+            <span class="font-semibold text-[#2f327d] dark:text-[#9AA4FF]"> For Teachers And Learners</span>
+          </h3>
+          <p class="text-base sm:text-lg lg:text-[22px] text-[#696983] leading-relaxed">
+            Class has a dynamic set of teaching tools built to be deployed and used during class. Teachers can handout
+            assignments in real-time for students to complete and submit.
+          </p>
+        </div>
+        <div class="w-full lg:w-1/2 flex justify-center items-center overflow-hidden">
+          <img src="./teach_thinking.png" alt="Teaching Tools" class="w-full max-w-[100%] h-auto object-contain"
+            data-aos="fade-left" data-aos-duration="800" data-aos-once="true" />
+        </div>
+      </div>
+    </section>
+
+    <div class="flex flex-col lg:flex-row items-center gap-8 mb-32">
+      <div class="hidden lg:flex w-full lg:w-1/2 relative">
+        <div class="relative w-full max-w-[621px] aspect-[621/651]">
+          <div class="absolute inset-0">
+            <div class="hidden sm:flex absolute w-[19px] h-[19px] top-[95%] left-[5%] bg-[#34e6a5] rounded-full">
+            </div>
+            <div class="hidden sm:flex absolute w-4 h-4 top-[50%] left-[90%] bg-[#f3528c] rounded-full"></div>
+            <div class="absolute w-[50px] h-[50px] sm:w-[100px] sm:h-[100px] top-0 left-0 bg-[#677ef3] rounded-full"
+              data-aos="zoom-in" data-aos-duration="800" data-aos-once="true">
+            </div>
+
+            <div
+              class="absolute w-[75%] h-[85%] top-[5%] left-[10%] bg-white rounded-[18px] shadow-[0px_9.1px_43.69px_#272a6e1a]"
+              data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
+            </div>
+
+
+
+
+
+            <div
+              class="absolute w-[387px] top-[148px] left-[84px] font-poppins font-semibold text-[#55578d] sm:text-[24px] lg:text-[31px] leading-[49.5px]"
+              data-aos="fade-right" data-aos-duration="800" data-aos-once="true" data-aos-delay="300">
+              True or false? This play takes place in Italy
+            </div>
+
+            <div
+              class="absolute w-[77px] h-[77px] top-[7px] left-[413px] bg-white rounded-full rotate-[-10.96deg] shadow-[0px_3.64px_40.05px_#2f327d1a] flex items-center justify-center"
+              data-aos="fade-down" data-aos-duration="800" data-aos-once="true" data-aos-delay="200">
+              <div
+                class="w-[43px] h-[43px] border-[2.73px] border-[#ee3075] rounded-full relative flex items-center justify-center">
+                <img src="./cross_2.svg" alt="X" class="w-[18px] h-[18px] rotate-[10.96deg]" />
+              </div>
+            </div>
+
+            <div
+              class="absolute w-[77px] h-[77px] top-14 left-[470px] bg-white rounded-full rotate-[13.90deg] shadow-[0px_3.64px_40.05px_#2f327d1a] flex items-center justify-center"
+              data-aos="fade-down" data-aos-duration="800" data-aos-once="true" data-aos-delay="400">
+              <img src="./tick.svg" alt="Tick" class="w-[50px] h-[50px]" />
+            </div>
+
+
+            <div class="absolute w-[174px] h-12 top-[59px] left-[84px] bg-[#cdd8ff] rounded-full"
+              data-aos="fade-right" data-aos-duration="800" data-aos-once="true" data-aos-delay="200"></div>
+            <div class="absolute top-[66px] left-[118px] font-poppins font-medium text-[#707eb0] text-xl"
+              data-aos="fade-right" data-aos-duration="800" data-aos-once="true" data-aos-delay="300">
+              Question 1
+            </div>
+
+            <img src="./italy.png" class="absolute w-[456px] h-64 top-[289px] left-20" alt="Quiz image"
+              data-aos="fade-right" data-aos-duration="800" data-aos-once="true" data-aos-delay="500" />
+
+            <div class="absolute w-[367px] h-[120px] top-[503px] left-[252px]" data-aos="fade-up"
+              data-aos-duration="800" data-aos-once="true" data-aos-delay="600">
+              <div class="relative w-full h-full bg-white rounded-[18.21px] shadow-[0px_18.21px_52.8px_#272a6e14]">
+                <div class="absolute top-[27px] left-[146px] w-[191px] h-[72px]">
+                  <p class="text-[#41be90] text-xl font-poppins font-semibold leading-8 z-10 relative">
+                    Your answer was sent successfully
+                  </p>
+                  <div class="absolute top-[34px] left-[152px] w-[37px] h-[38px] bg-[#d7f8ec] rounded-full z-0"></div>
+                </div>
+
+
+                <div class="absolute top-[22px] left-[29px] w-[88px] h-[76px] " data-aos="fade-right"
+                  data-aos-duration="800" data-aos-once="true" data-aos-delay="700">
+                  <div class="absolute top-[11px] left-[11px] w-[59px] h-[59px] bg-[#d7f8ec] rounded-full"></div>
+                  <img src="./tick_2.png" alt="Tick success" class="absolute w-full h-full top-0 left-0" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="absolute w-[23px] h-[23px] top-0 left-[118px] bg-[#f3a267] rounded-full " data-aos="zoom-in"
+            data-aos-duration="800" data-aos-once="true" data-aos-delay="100"></div>
+        </div>
+      </div>
+
+      <div class="w-full lg:w-1/2 px-4 sm:px-6 lg:px-0 space-y-6 sm:space-y-8">
+        <h3
+          class="font-poppins text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] leading-tight sm:leading-[48px] md:leading-[56px] lg:leading-[64px] font-normal"
+          data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
+          <span class="font-semibold text-[#2f327d] dark:text-[#9AA4FF]">Assessments, </span>
+          <span class="font-semibold text-[#f48c06]">Quizzes</span>
+          <span class="font-semibold text-[#2f327d] dark:text-[#9AA4FF]">, Tests</span>
+        </h3>
+
+        <p class="font-poppins text-[#696983] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] leading-relaxed sm:leading-[30px] md:leading-[36px] lg:leading-[39.6px] tracking-wide"
+          data-aos="fade-left" data-aos-duration="800" data-aos-once="true" data-aos-delay="200">
+          Easily launch live assignments, quizzes, and tests. Student results are
+          automatically entered in the online gradebook.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="flex flex-col-reverse lg:flex-row items-center gap-8 mb-32 overflow-x-hidden">
+      <div class="w-full lg:w-1/2 px-4 sm:px-6 lg:px-0 space-y-6 sm:space-y-8">
+        <h3
+          class="font-poppins text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] leading-tight sm:leading-[48px] md:leading-[56px] lg:leading-[64px]"
+          data-aos="fade-right" data-aos-duration="800" data-aos-once="true">
+          <span class="font-semibold text-[#f48c06]">Class Management </span>
+          <span class="font-semibold text-[#2f327d] dark:text-[#9AA4FF]">Tools for Educators</span>
+        </h3>
+
+        <p class="font-poppins text-[#696983] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] leading-relaxed sm:leading-[30px] md:leading-[36px] lg:leading-[39.6px]"
+          data-aos="fade-right" data-aos-duration="800" data-aos-once="true" data-aos-delay="200">
+          Class provides tools to help run and manage the class such as Class Roster, Attendance, and more.
+          With the Gradebook, teachers can review and grade tests and quizzes in real-time.
+        </p>
+      </div>
+
+
+      <div class="hidden lg:flex w-full lg:w-1/2 relative overflow-x-hidden">
+        <div class="relative w-full max-w-[818px] h-[560px] overflow-x-hidden" data-aos="fade-left"
+          data-aos-duration="800" data-aos-once="true">
+          <div class="absolute w-[289px] h-52 top-[352px] left-[26px] bg-[#d2e7ff] rounded-[20px]"></div>
+          <div
+            class="absolute w-[718px] h-[479px] top-[61px] left-[46px] bg-white rounded-[20px] shadow-[0px_10px_48px_#272a6e1a]">
+          </div>
+          <div class="absolute w-[718px] h-[70px] top-[61px] left-[46px] bg-[#54aef0] rounded-t-[20px]"></div>
+
+          <div class="absolute w-[127px] h-[30px] top-[241px] left-[46px] bg-[#39c6f2]"></div>
+          <div class="absolute w-[260px] h-[30px] top-[392px] left-[46px] bg-[#68f145]"></div>
+          <div class="absolute w-[305px] h-[30px] top-[214px] left-[459px] bg-[#3188ef]"></div>
+          <div class="absolute w-[146px] h-[30px] top-[335px] left-[618px] bg-[#f13b3b]"></div>
+
+          <div
+            class="absolute top-[79px] left-[343px] text-[22px] text-[#f1fdff] font-semibold leading-[35.2px] font-poppins">
+            GradeBook
+          </div>
+
+          <div class="absolute w-[172px] h-[59px] top-[456px] left-[554px]">
+            <div class="relative w-full h-full">
+              <div class="absolute w-[146px] h-[29px] top-[30px] left-3 bg-[#545ae7] rounded-full blur-[27px]"></div>
+              <div
+                class="absolute w-full h-[58px] top-0 left-0 rounded-full bg-gradient-to-br from-[#545ae7] to-[#393fcf]">
+              </div>
+              <div class="absolute top-[13px] left-[50px] text-white text-[22px] font-medium">Export</div>
+            </div>
+          </div>
+
+          <img src="./h1.svg" class="absolute w-[85px] h-[85px] top-[209px] left-[124px]" alt="User 1" />
+          <img src="./h4.svg" class="absolute w-[85px] h-[85px] top-[359px] left-[266px]" alt="User 2" />
+          <img src="./h2r.svg" class="absolute w-[85px] h-[85px] top-[186px] left-[416px]" alt="User 3" />
+          <img src="./h3.svg" class="absolute w-[85px] h-[85px] top-[302px] left-[582px]" alt="User 4" />
+
+          <div class="absolute w-[100px] h-[50px] top-[252px] left-[185px] bg-[#cdf3ff] rounded-full"></div>
+          <div class="absolute w-[100px] h-[50px] top-[407px] left-[327px] bg-[#d7ffcd] rounded-full"></div>
+          <div class="absolute w-[100px] h-[50px] top-[256px] left-[409px] bg-[#cde4ff] rounded-full"></div>
+          <div class="absolute w-[100px] h-[50px] top-[357px] left-[518px] bg-[#ffcdcd] rounded-full"></div>
+
+          <div class="absolute top-[260px] left-[217px] text-[#43869b] text-[22px] font-medium font-poppins">100</div>
+          <div class="absolute top-[415px] left-[363px] text-[#4e8c3e] text-[22px] font-medium font-poppins">85</div>
+          <div class="absolute top-[264px] left-[445px] text-[#486e9c] text-[22px] font-medium font-poppins">98</div>
+          <div class="absolute top-[365px] left-[554px] text-[#9e5555] text-[22px] font-medium font-poppins">75</div>
+
+          <img src="./star.svg" class="absolute w-[30px] h-[29px] top-[278px] left-[154px]" alt="Star" />
+
+          <div class="absolute w-[132px] h-[132px] top-[13px] left-[13px] rotate-[-13.28deg]">
+            <div class="relative h-full w-full rounded-full">
+              <div class="absolute w-full h-full bg-white opacity-80 rounded-full shadow-[0px_10px_48px_#282b6f1a]">
+              </div>
+              <div
+                class="absolute w-[100px] h-[100px] top-4 left-4 bg-white rounded-full shadow-[0px_10px_48px_#282b6f1a]">
+              </div>
+              <img src="./big_star.svg" class="absolute w-[92px] h-[93px] top-[18px] left-[18px]" alt="Star Main" />
+            </div>
+          </div>
+
+          <img src="./bookr.svg" class="absolute w-[196px] h-[196px] top-[62px] left-[650px]" alt="Character Group" />
+
+          <div class="absolute w-[82px] h-[35px] top-[484px] left-[3px]">
+            <img src="./waves.svg" alt="waves" />
+          </div>
+
+          <div class="absolute w-5 h-5 top-[41px] left-[780px] bg-[#9ed6ff] rounded-[10px]"></div>
+          <div class="absolute w-11 h-11 top-[7px] left-[712px] bg-[#9ed6ff] rounded-full"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="flex flex-col-reverse lg:flex-row items-center gap-8 mb-32 px-4 sm:px-6 lg:px-0">
+      <div class="hidden lg:flex w-full lg:w-1/2 relative">
+        <div class="relative w-full max-w-[755px] h-[499px]" data-aos="fade-right" data-aos-duration="800"
+          data-aos-once="true">
+          <div class="absolute w-[718px] h-[499px] top-0 left-0">
+            <div
+              class="absolute w-[113px] h-[113px] top-0 left-[599px] rounded-full border-[18.83px] border-solid border-[#23bdee]">
+            </div>
+            <div class="absolute w-[197px] h-[193px] top-[223px] left-0 bg-[#73bcff] rounded-[18.83px]"></div>
+
+            <div class="absolute w-[658px] h-[365px] top-[31px] left-[19px] bg-[#f4f4f4] rounded-[18.83px]">
+              <div class="h-[26px] bg-[#eaeaea] rounded-t-[18.83px] relative">
+                <div class="absolute top-1.5 left-[13px] w-[13px] h-[13px] rounded-full bg-[#ee6666]"></div>
+                <div class="absolute top-1.5 left-8 w-[13px] h-[13px] rounded-full bg-[#f6c566]"></div>
+                <div class="absolute top-1.5 left-[52px] w-[13px] h-[13px] rounded-full bg-[#5bea7a]"></div>
+              </div>
+
+              <div class="absolute top-[296px] left-9">
+                <div class="w-[116px] h-[39px] bg-[#3364e1] rounded-full shadow-md "></div>
+              </div>
+              <div class="absolute top-[296px] left-[178px]">
+                <div class="w-[116px] h-[39px] bg-[#e13367] rounded-full shadow-md relative">
+                  <div class="text-white font-bold text-sm text-center pt-2">Call</div>
+                  <div class="absolute top-[13px] left-8 w-[13px] h-[13px] bg-contain"></div>
+                </div>
+              </div>
+
+              <img class="absolute w-[255px] h-[249px] top-[51px] left-[5px]" src="" alt="Group" />
+
+              <div class="absolute w-full h-full top-0 left-0 bg-[#87a6e31a] rounded-[18.83px] backdrop-blur-md">
+              </div>
+            </div>
+
+            <div class="absolute w-[595px] h-[368px] top-[131px] left-[122px] bg-white rounded-[18.83px] shadow-xl">
+              <div class="h-6 bg-[#eaeaea] rounded-t-[18.83px] relative">
+                <div class="absolute top-1.5 left-7 flex gap-3">
+                  <div class="w-3 h-3 rounded-full bg-[#ee6666]"></div>
+                  <div class="w-3 h-3 rounded-full bg-[#f6c566]"></div>
+                  <div class="w-3 h-3 rounded-full bg-[#5bea7a]"></div>
+                </div>
+              </div>
+
+              <div class="absolute top-[61px] left-[54px] w-[199px] h-[193px] bg-cover"
+                style="background-image : url('./l_pat.svg')"></div>
+
+              <div class="absolute top-[61px] left-[336px] w-[199px] h-48 bg-cover"
+                style="background-image : url('./patricia.svg')">
+                <div
+                  class="absolute bottom-0 left-[11px] w-[132px] h-[26px] bg-white/40 text-white text-xs font-semibold flex items-center px-2 rounded-md backdrop-blur-sm">
+                  Patricia Mendoza
+                </div>
+              </div>
+
+              <div class="absolute top-[294px] left-[356px]">
+                <div
+                  class="w-[198px] h-[55px] rounded-full bg-gradient-to-br from-[#f55454] to-[#e5422b] text-white font-medium text-center pt-4">
+                  End Discussion
+                </div>
+              </div>
+
+              <div class="absolute top-[289px] left-[38px]">
+                <div class="text-[#696983] text-xl font-bold">Private Discussion</div>
+                <div class="text-[#a7a7b5] text-sm font-semibold">Your video can't be seen by others</div>
+              </div>
+            </div>
+
+            <img class="absolute w-[23px] h-[23px] top-[114px] left-[728px]" src="./q.svg" alt="Decor Triangle" />
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full lg:w-1/2 px-4 sm:px-6 lg:px-0 space-y-6 sm:space-y-8">
+        <h3
+          class="font-poppins text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] leading-tight sm:leading-[48px] md:leading-[56px] lg:leading-[64px]"
+          data-aos="fade-left" data-aos-duration="800" data-aos-once="true">
+          <span class="font-semibold text-[#2f327d] dark:text-[#9AA4FF]">One-on-One </span>
+          <span class="font-semibold text-[#f48c06]">Discussions</span>
+        </h3>
+        <p class="font-poppins text-[#696983] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] leading-relaxed sm:leading-[30px] md:leading-[36px] lg:leading-[39.6px]"
+          data-aos="fade-left" data-aos-duration="800" data-aos-once="true" data-aos-delay="200">
+          Teachers and teacher assistants can talk with students privately without leaving the Zoom environment.
+        </p>
+      </div>
+    </div>
+
+    <div class="flex justify-center mt-16" data-aos="zoom-in" data-aos-duration="800" data-aos-once="true">
+      <button
+        class="w-[220px] sm:w-[260px] md:w-[280px] h-16 sm:h-[72px] md:h-20 rounded-[80px] border border-solid border-[#f48c06] bg-transparent hover:bg-[#f48c0610] transition duration-300">
+        <span
+          class="[font-family:'Nunito_Sans',Helvetica] font-normal text-xl sm:text-[22px] md:text-2xl text-[#f48c06] tracking-[0.48px] leading-[38px] sm:leading-[41px] md:leading-[43.2px]">
+          See more features
+        </span>
+      </button>
+
+    </div>
+  </section>
+
+  <section class="relative w-full max-w-[1457px] h-auto py-16 mx-auto flex flex-col md:flex-row">
+    <div class="relative w-full md:w-1/2">
+      <div class="grid grid-cols-2 gap-6 sm:gap-8 p-4 sm:p-6 md:hidden">
+        <img class="w-[100px] h-[90px] object-contain mx-auto" src="./onedrive.svg" alt="OneDrive" data-aos="zoom-in"
+          data-aos-duration="800" />
+        <img class="w-[80px] h-[75px] object-contain mx-auto" src="./googledrive.svg" alt="Google Drive"
+          data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100" />
+        <img class="w-[80px] h-[70px] object-contain mx-auto" src="./dropbox.svg" alt="Dropbox" data-aos="zoom-in"
+          data-aos-duration="800" data-aos-delay="200" />
+        <img class="w-[90px] h-[90px] object-contain mx-auto" src="./teams.svg" alt="Microsoft Teams"
+          data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300" />
+      </div>
+
+      <div class="hidden md:block relative w-full h-[459px]">
+        <img class="absolute object-cover w-[228px] h-[195px] top-3 left-0" src="./onedrive.svg" alt="OneDrive"
+          data-aos="fade-right" data-aos-duration="800" data-aos-delay="0" />
+        <img class="absolute object-cover w-[138px] h-[135px] top-[291px] left-[79px]" src="./googledrive.svg"
+          alt="Google Drive" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" />
+        <img class="absolute object-cover w-[130px] h-[121px] top-[87px] left-[319px]" src="./dropbox.svg"
+          alt="Dropbox" data-aos="fade-down" data-aos-duration="800" data-aos-delay="200" />
+        <img class="absolute object-cover w-[159px] h-[159px] top-[300px] left-[319px]" src="./teams.svg"
+          alt="Microsoft Teams" data-aos="fade-left" data-aos-duration="800" data-aos-delay="300" />
+      </div>
+    </div>
+
+
+
+    <div class="relative w-full md:w-1/2 flex flex-col px-4 sm:px-6 lg:px-0">
+      <div class="flex items-center gap-4" data-aos="fade-up" data-aos-duration="800">
+        <span class="font-[Nunito_Sans] font-normal text-[#525495] text-sm sm:text-base lg:text-xl tracking-[4px]">
+          INTEGRATIONS
+        </span>
+      </div>
+
+      <h2
+        class="mt-10 sm:mt-[60px] font-[Nunito_Sans] font-bold text-2xl sm:text-3xl lg:text-4xl leading-snug sm:leading-[48px] lg:leading-[57.6px]"
+        data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+        <span class="text-[#2f327d] dark:text-[#9AA4FF]">200+ educational tools and platform </span>
+        <span class="text-[#f48c06]">integrations</span>
+      </h2>
+
+      <p class="mt-8 sm:mt-[60px] font-[Nunito_Sans] font-normal text-[#696983] text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed sm:leading-[36px] lg:leading-[43.2px]"
+        data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+        Schoology has every tool your classroom needs and comes pre-integrated with more than
+        200+ tools, student information systems (SIS), and education platforms.
+      </p>
+
+      <button
+        class="mt-8 sm:mt-[50px] w-full max-w-[280px] h-14 sm:h-20 rounded-full border border-[#f48c06] text-[#f48c06] text-base sm:text-lg md:text-xl font-[Nunito_Sans] font-normal leading-[24px] sm:leading-[39.6px] bg-transparent hover:bg-[#f48c06]/10 transition"
+        data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">
+        See All Integrations
+      </button>
+    </div>
+  </section>
+
+  <section class="relative w-full py-16 px-4 md:px-8 lg:px-4 max-w-[1537px] mx-auto">
+    <div class="flex flex-col md:flex-row gap-8 px-4 sm:px-6 lg:px-0">
+      <div class="flex flex-col md:w-1/2 space-y-8" data-aos="fade-right" data-aos-duration="800">
+        <div class="flex flex-col space-y-4">
+          <span class="font-[Nunito_Sans] font-normal text-[#525596] text-sm sm:text-base md:text-xl tracking-[4px]">
+            TESTIMONIAL
+          </span>
+          <div class="w-16 sm:w-20 h-px bg-[#525596]"></div>
+
+          <h2
+            class="font-[Nunito_Sans] font-bold text-[#2f327d] dark:text-[#9AA4FF] text-3xl sm:text-5xl lg:text-6xl leading-snug">
+            What They Say?
+          </h2>
+        </div>
+
+        <div class="space-y-4 sm:space-y-6">
+          <p
+            class="font-[Poppins] text-[#696983] text-base sm:text-lg md:text-xl lg:text-[26px] tracking-wide sm:tracking-[0.44px] leading-relaxed sm:leading-[36px] lg:leading-[41.6px]">
+            Skilline has got more than 100k positive ratings from our users around the world.
+          </p>
+          <p
+            class="font-[Poppins] text-[#696983] text-base sm:text-lg md:text-xl lg:text-[26px] tracking-wide sm:tracking-[0.44px] leading-relaxed sm:leading-[36px] lg:leading-[41.6px]">
+            Some of the students and teachers were greatly helped by the Skilline.
+          </p>
+          <p
+            class="font-[Poppins] text-[#696983] text-base sm:text-lg md:text-xl lg:text-[26px] tracking-wide sm:tracking-[0.44px] leading-relaxed sm:leading-[41.6px]">
+            Are you too? Please give your assessment.
+          </p>
+        </div>
+
+        <div
+          class="relative w-full max-w-[403px] h-14 sm:h-20 rounded-full border border-[#f48c06] flex items-center mt-4">
+          <span
+            class="ml-6 sm:ml-[37px] font-[Poppins] text-[#f48c06] text-base sm:text-lg md:text-xl lg:text-[22px] leading-[24px] sm:leading-[35.2px]">
+            Write your assessment
+          </span>
+          <div
+            class="absolute right-0 w-14 h-14 sm:w-20 sm:h-20 rounded-full border border-[#f48c06] flex items-center justify-center">
+            <img class="w-5 h-4 sm:w-[26px] sm:h-[15px]" src="./arrow.svg" alt="Arrow Icon" />
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="relative md:w-1/2 flex justify-end pr-30">
+        <div class="relative">
+
+          <img class="w-[560px] h-[700px]" src="./woman.svg" alt="Testimonial Image" data-aos="fade-left"
+            data-aos-duration="800" />
+
+          <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="200"
+            class="absolute bottom-0 lg:-right-30 -right-10 translate-x-[69px] w-[350px] h-[200px] lg:w-[680px] lg:h-[329px] rounded-[20px] shadow-[2px_4px_60px_#292c7c1a] overflow-hidden bg-white">
+            <div class="absolute left-0 top-0 w-3.5 h-full bg-[#f67766] rounded-[20px_0px_0px_20px]"></div>
+
+
+            <div class="absolute left-[30px] lg:left-[123px] top-[49px] w-px h-[139px] bg-gray-300"></div>
+
+            <div class=" lg:pt-10 lg:pl-[180px] pl-[50px] pr-6 ">
+              <blockquote
+                class="font-[Nunito_Sans] font-normal text-[#5e5e7e] lg:text-[22px] tracking-[0.44px] lg:leading-[39.6px] lg:mb-12 md:text-[18px] text-[12px]">
+                "Thank you so much for your help. It's exactly what I've been
+                looking for. You won't regret it. It really saves me time and
+                effort. Skilline is exactly what our business has been lacking."
+              </blockquote>
+
+              <div class="flex justify-between items-center">
+                <div>
+                  <h3 class="font-[Nunito_Sans] font-semibold text-[#5e5e7e] text-2xl leading-[43.2px]">
+                    Gloria Rose
+                  </h3>
+                </div>
+
+                <div class="flex flex-col items-end">
+                  <div class="flex mb-1">
+
+                    <img class="w-[23px] h-[22px] mx-[3px]" src="./tstar.svg" alt="Star" />
+                    <img class="w-[23px] h-[22px] mx-[3px]" src="./tstar.svg" alt="Star" />
+                    <img class="w-[23px] h-[22px] mx-[3px]" src="./tstar.svg" alt="Star" />
+                    <img class="w-[23px] h-[22px] mx-[3px]" src="./tstar.svg" alt="Star" />
+                    <img class="w-[23px] h-[22px] mx-[3px]" src="./tstar.svg" alt="Star" />
+                  </div>
+                  <span
+                    class="font-[Nunito_Sans] font-semibold text-[#80819a] text-lg tracking-[0.36px] leading-[32.4px]">
+                    12 reviews at Yelp
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="absolute top-52 right-115 translate-x-[538px] w-20 h-20 rounded-[40px] bg-white shadow-[0px_4px_60px_#282b7c26] flex items-center justify-center p-0">
+
+            <img class="w-4 h-[23px]" src="./sidearrow.png" alt="Right Arrow" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="w-full max-w-[1561px] mx-auto py-16 px-4">
+    <div class="flex flex-col items-center mb-16 text-center">
+      <h2 class="font-bold text-3xl sm:text-4xl text-[#2f327d] dark:text-[#9AA4FF] leading-tight font-[Nunito_Sans]"
+        data-aos="fade-up">
+        Lastest News and Resources
+      </h2>
+      <p class="font-normal text-lg sm:text-2xl text-[#696983] mt-4 dark:text-white font-[Nunito_Sans] max-w-2xl"
+        data-aos="fade-up" data-aos-delay="200">
+        See the developments that have occurred to Skillines in the world
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <div class="lg:col-span-5" data-aos="fade-up" data-aos-duration="1000">
+        <div class="space-y-6">
+          <div class="relative">
+            <div class="h-[250px] sm:h-[340px] w-full rounded-[20px] bg-cover bg-center"
+              style="background-image: url('./lap-coffee.svg')">
+              <div class="h-full w-full bg-[#171b41] rounded-[20px] opacity-10"></div>
+            </div>
+            <div class="absolute bottom-[-18px] left-0">
+              <span
+                class="bg-[#f4c467] text-[#252641] font-medium text-sm sm:text-xl px-6 sm:px-8 py-1 sm:py-2 rounded-[80px] font-[Poppins]">
+                NEWS
+              </span>
+            </div>
+          </div>
+
+          <div class="pt-10">
+            <h3
+              class="text-[20px] sm:text-[26px] text-[#252641] font-medium leading-tight font-[Poppins] dark:text-white mb-3">
+              Class adds $30 million to its balance sheet for a Zoom-friendly edtech solution
+            </h3>
+            <p class="text-sm sm:text-xl text-[#696983] font-[Poppins] leading-relaxed">
+              Class, launched less than a year ago by Blackboard co-founder Michael Chasen, integrates exclusively...
+            </p>
+            <a href="#" class="text-sm sm:text-xl text-[#696983] underline font-[Poppins] mt-2 inline-block">
+              Read more
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 space-y-10">
+
+        <div class="flex flex-col md:flex-row gap-4 sm:gap-6" data-aos="fade-left" data-aos-duration="1000">
+          <div class="relative w-full md:w-[280px] h-[200px]">
+            <div class="h-full w-full rounded-[20px] bg-cover bg-center"
+              style="background-image: url('./girl-study.svg')">
+              <div class="h-full w-full bg-[#171b41] rounded-[20px] opacity-10"></div>
+            </div>
+            <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2">
+              <span
+                class="inline-block bg-[#f4c467] text-[#252641] font-normal text-[14px] sm:text-sm px-3 sm:px-4 py-3 rounded-[80px] font-[Poppins] whitespace-nowrap text-center">
+                PRESS RELEASE
+              </span>
+
+            </div>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-[18px] sm:text-[22px] font-medium text-[#252641] dark:text-white font-[Poppins] mb-2">
+              Class Technologies Inc. Closes $30 Million Series A Financing to Meet High Demand
+            </h3>
+            <p class="text-sm sm:text-xl text-[#696983] font-[Poppins]">
+              Class Technologies Inc., the company that created Class,...
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-4 sm:gap-6" data-aos="fade-left" data-aos-duration="1000"
+          data-aos-delay="200">
+          <div class="relative w-full md:w-[280px] h-[200px]">
+            <div class="h-full w-full rounded-[20px] bg-cover bg-center"
+              style="background-image: url('./online-meet.svg')">
+              <div class="h-full w-full bg-[#171b41] rounded-[20px] opacity-10"></div>
+            </div>
+            <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2">
+              <span
+                class="bg-[#f4c467] text-[#252641] font-normal text-xs sm:text-lg px-3 sm:px-4 py-1 rounded-[80px] font-[Poppins]">
+                NEWS
+              </span>
+            </div>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-[18px] sm:text-[22px] font-medium text-[#252641] dark:text-white font-[Poppins] mb-2">
+              Zoom's earliest investors are betting millions on a better Zoom for schools
+            </h3>
+            <p class="text-sm sm:text-xl text-[#696983] font-[Poppins]">
+              Zoom was never created to be a consumer product. Nonetheless, the...
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-4 sm:gap-6" data-aos="fade-left" data-aos-duration="1000"
+          data-aos-delay="400">
+          <div class="relative w-full md:w-[280px] h-[200px]">
+            <div class="h-full w-full rounded-[20px] bg-cover bg-center"
+              style="background-image: url('./animated.svg')">
+              <div class="h-full w-full bg-[#171b41] rounded-[20px] opacity-10"></div>
+            </div>
+            <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2">
+              <span
+                class="bg-[#f4c467] text-[#252641] font-normal text-xs sm:text-lg px-3 sm:px-4 py-1 rounded-[80px] font-[Poppins]">
+                NEWS
+              </span>
+            </div>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-[18px] sm:text-[22px] font-medium text-[#252641] dark:text-white font-[Poppins] mb-2">
+              Former Blackboard CEO Raises $16M to Bring LMS Features to Zoom Classrooms
+            </h3>
+            <p class="text-sm sm:text-xl text-[#696983] font-[Poppins]">
+              This year, investors have reaped big financial returns from betting on Zoom...
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer class="w-full bg-[#252641] py-16 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col items-center">
+      <div class="flex flex-col md:flex-row items-center mb-16 gap-6 md:gap-10 text-center md:text-left">
+
+        <div class="relative w-[148px] h-[78px]">
+          <img class="absolute w-[78px] h-[78px] top-0 left-0" src="./logopoly.svg" alt="Polygon" />
+          <div
+            class="absolute top-[15px] left-5 font-bold text-white text-[28px] md:text-[32px] tracking-[1.28px] font-[Poppins]">
+            Skilline
+          </div>
+        </div>
+
+        <div class="hidden md:block h-[83px] w-px bg-white"></div>
+
+        <div class="font-semibold text-white text-[18px] md:text-[22px] tracking-[0.88px] font-[Poppins]">
+          Virtual Class for Zoom
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center mb-16 w-full" data-aos="fade-up" data-aos-duration="800">
+        <div
+          class="font-medium text-[#b2b3cf] text-[22px] md:text-[26px] text-center tracking-[1.04px] mb-6 font-[Poppins] px-4">
+          Subscribe to get our Newsletter
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-[600px]">
+          <input type="email" placeholder="Your Email"
+            class="w-full sm:w-[400px] h-[52px] sm:h-[60px] rounded-[80px] border border-[#83839a] text-[#82839a] text-base sm:text-xl px-6 py-3 tracking-wide font-[Poppins] outline-none" />
+
+          <button
+            class="relative w-full sm:w-[179px] h-[52px] sm:h-[60px] rounded-[60px] bg-gradient-to-br from-[#545ae7] to-[#393fcf] text-white text-[18px] sm:text-[22px] font-medium font-[Poppins] overflow-hidden">
+            <div
+              class="absolute w-[151px] h-[29px] bottom-0 left-3 bg-[#545ae7] rounded-[60px] blur-[27px] opacity-50">
+            </div>
+            <span class="relative z-10">Subscribe</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-6 mb-8">
+        <a href="#"
+          class="text-[#b2b3cf] text-[18px] sm:text-[22px] tracking-wide font-[Poppins] hover:text-white transition">
+          Careers
+        </a>
+        <div class="hidden sm:block h-[17px] w-px bg-[#b2b3cf]"></div>
+        <a href="#"
+          class="text-[#b2b3cf] text-[18px] sm:text-[22px] tracking-wide font-[Poppins] hover:text-white transition">
+          Privacy Policy
+        </a>
+        <div class="hidden sm:block h-[17px] w-px bg-[#b2b3cf]"></div>
+        <a href="#"
+          class="text-[#b2b3cf] text-[18px] sm:text-[22px] tracking-wide font-[Poppins] hover:text-white transition">
+          Terms & Conditions
+        </a>
+      </div>
+
+      <div class="text-[#b2b3cf] text-[16px] sm:text-[22px] tracking-wide font-[Poppins] text-center">
+        © 2021 Class Technologies Inc.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+
+
+
+
+</body>
+
+
+</html>
+
+
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+  function toggleDarkMode() {
+    document.documentElement.classList.toggle('dark');
+    const isDark = document.documentElement.classList.contains('dark');
+    localStorage.theme = isDark ? 'dark' : 'light';
+    updateThemeIcon(isDark);
+    updateThemeText(isDark);
+  }
+
+  function updateThemeIcon(isDark) {
+    const iconDesktop = document.getElementById('theme-icon-desktop');
+    const iconMobile = document.getElementById('theme-icon-mobile'); // assuming you have a mobile version
+    if (isDark) {
+      if (iconDesktop) iconDesktop.src = './sun.png';
+      if (iconMobile) iconMobile.src = './sun.png';
+    } else {
+      if (iconDesktop) iconDesktop.src = './moon.png';
+      if (iconMobile) iconMobile.src = './moon.png';
+    }
+  }
+
+  function updateThemeText(isDark) {
+    const textDesktop = document.getElementById('theme-text-desktop');
+    const textMobile = document.getElementById('theme-text-mobile'); // assuming you have a mobile version
+    if (isDark) {
+      if (textDesktop) textDesktop.textContent = 'Light Mode';
+      if (textMobile) textMobile.textContent = 'Light Mode';
+    } else {
+      if (textDesktop) textDesktop.textContent = 'Dark Mode';
+      if (textMobile) textMobile.textContent = 'Dark Mode';
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const isDark = localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+      updateThemeIcon(true);
+      updateThemeText(true);
+    } else {
+      updateThemeIcon(false);
+      updateThemeText(false);
+    }
+  });
+</script>
