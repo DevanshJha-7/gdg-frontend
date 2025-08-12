@@ -1024,7 +1024,7 @@
 
   function updateThemeIcon(isDark) {
     const iconDesktop = document.getElementById('theme-icon-desktop');
-    const iconMobile = document.getElementById('theme-icon-mobile'); // assuming you have a mobile version
+    const iconMobile = document.getElementById('theme-icon-mobile');
     if (isDark) {
       if (iconDesktop) iconDesktop.src = './sun.png';
       if (iconMobile) iconMobile.src = './sun.png';
@@ -1036,7 +1036,7 @@
 
   function updateThemeText(isDark) {
     const textDesktop = document.getElementById('theme-text-desktop');
-    const textMobile = document.getElementById('theme-text-mobile'); // assuming you have a mobile version
+    const textMobile = document.getElementById('theme-text-mobile'); 
     if (isDark) {
       if (textDesktop) textDesktop.textContent = 'Light Mode';
       if (textMobile) textMobile.textContent = 'Light Mode';
